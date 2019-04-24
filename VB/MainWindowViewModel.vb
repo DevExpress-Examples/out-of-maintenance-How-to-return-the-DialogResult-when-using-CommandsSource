@@ -13,7 +13,7 @@ Namespace DialogTest
         Public Property ShowDialogCommand() As ICommand
 
         Public Async Sub OnShowDialog()
-            Dim injectionResult = Await ModuleManager.DefaultWindowManager.RegisterOrShowOrActivate("DialogView", New System.Reflection.Module("MyDialogView", Function() New MyDialogViewModel(), GetType(MyDialogView)))
+            Dim injectionResult = Await ModuleManager.DefaultWindowManager.RegisterOrShowOrActivate("DialogView", New [Module]("MyDialogView", Function() New MyDialogViewModel(), GetType(MyDialogView)))
             System.Diagnostics.Debug.WriteLine(injectionResult.Result)
         End Sub
     End Class
